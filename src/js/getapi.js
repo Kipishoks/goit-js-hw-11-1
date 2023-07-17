@@ -8,7 +8,7 @@ import { lightbox, loadMore, gallery} from '../index'
 const getImage = async (inputSearch, pageSearch) => {
   try {
       const data = await fetchData(inputSearch, pageSearch);
-        // console.log(data);
+        console.log(data);
     if (!data.hits.length) {
       gallery.innerHTML = ''; 
       loadMore.classList.add('unvisible');
