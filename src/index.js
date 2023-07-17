@@ -22,7 +22,7 @@ form.addEventListener('submit', onSubmin);
 
 function onSubmin(evt) {
     evt.preventDefault();
-    inputSearch = form.searchQuery.value;
+    const inputSearch = form.searchQuery.value;
     if (!inputSearch.trim() || inputSearch === queryToFetch) {
         gallery.innerHTML = '';
         loadMore.classList.add('unvisible');
