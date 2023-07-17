@@ -9,6 +9,7 @@ const gallery = document.querySelector('.gallery');
 const loadMore = document.querySelector('.load-more');
 let queryToFetch = '';
 let pageSearch;
+let inputSearch;
 
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
@@ -22,7 +23,7 @@ form.addEventListener('submit', onSubmin);
 
 function onSubmin(evt) {
     evt.preventDefault();
-    const inputSearch = form.searchQuery.value;
+    inputSearch = form.searchQuery.value;
     if (!inputSearch.trim() || inputSearch === queryToFetch) {
         gallery.innerHTML = '';
         loadMore.classList.add('unvisible');
